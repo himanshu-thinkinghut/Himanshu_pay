@@ -40,33 +40,31 @@
             android:layout_marginTop="70dp"
             android:orientation="vertical" >
 
-            <EditText
-                android:id="@+id/etUserName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/btnlogin"
-                android:layout_alignParentLeft="true"
-                android:layout_marginTop="22dp"
-                android:background="@drawable/edittext_bg"
-                android:ems="10"
-                android:hint="@string/hint_username"
-                android:paddingLeft="5dp"
-                android:singleLine="true" >
+           <EditText
+             android:id="@+id/etUserName"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_above="@+id/btnlogin"
+             android:layout_alignParentLeft="true"
+             android:layout_marginTop="22dp"
+             android:background="@drawable/edittext_bg"
+             android:ems="10"
+             android:hint="@string/hint_username"
+             android:paddingLeft="5dp"
+             android:singleLine="true" />
 
-                <requestFocus />
-            </EditText>
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:hint="@string/hint_password"
+            android:imeOptions="actionGo"
+            android:paddingLeft="5dp" />
 
-            <EditText
-                android:id="@+id/etPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
-                android:background="@drawable/edittext_bg"
-                android:ems="10"
-                android:hint="@string/hint_password"
-                android:inputType="textPassword"
-                android:paddingLeft="5dp"
-                android:singleLine="true" />
         </LinearLayout>
 
         <LinearLayout

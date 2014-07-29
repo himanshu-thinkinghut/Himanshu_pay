@@ -4,6 +4,26 @@
     <string name="app_name">PayPoint</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="scan">Scan</string>
+    <string name="home">Home</string>
+    <string name="inventory">Inventory</string>
+    <string name="additem">Add Item</string>
+    <string name="setting">Setting</string>
+    <string name="title_activity_dashboard">Elo</string>
+    <string name="empty_history">Click the scan button to start.</string>
+	<string name="code_types">Barcode Types</string>
+	<string name="logo_message">Barcode must be upright.\nAvoid glare and shadows.</string>
+	<string name="guidance_string">Try moving the camera close to each part of the barcode</string>
+	<string name="light">Light</string>
+	<string name="overlay_logo_contentdescription">RedLaser Logo</string>
+	<string name="done_button">Done</string>
+	<string name="getImage_button">Get Image</string>
+	<string name="login_failed">Login fail</string>
+	<string name="error_empty_edittext">Field cannot be left blank</string>
+    <string name="error_invalid_user">Invalid User</string>
+    <string name="error_invalid_password">Invalid Password</string>
+    <string name="error_faild_password">Password failed</string>
+   
     
     <!-- Nav Drawer Menu Items -->
     <string-array name="nav_drawer_items">
@@ -38,20 +58,7 @@
     <string name="search">Search</string>
     <string name="new_inventory_item">New Inventory Item</string>
     <string name="required_filed">Note * is required field</string>
-    <string name="scan">Scan</string>
-    <string name="home">Home</string>
-    <string name="inventory">Inventory</string>
-    <string name="additem">Add Item</string>
-    <string name="setting">Setting</string>
-    <string name="title_activity_dashboard">Elo</string>
-    <string name="empty_history">Click the scan button to start.</string>
-	<string name="code_types">Barcode Types</string>
-	<string name="logo_message">Barcode must be upright.\nAvoid glare and shadows.</string>
-	<string name="guidance_string">Try moving the camera close to each part of the barcode</string>
-	<string name="light">Light</string>
-	<string name="overlay_logo_contentdescription">RedLaser Logo</string>
-	<string name="done_button">Done</string>
-	<string name="getImage_button">Get Image</string>
+    
    
     
 
