@@ -107,11 +107,11 @@ public class MainActivity extends Activity implements OnClickListener, OnTouchLi
 		// TODO Auto-generated method stub
 		
 		if (v.getId() == btnLogin.getId()) {
-			String uName =  etUserName.getText().toString() ; 
-			String password =  etPassword.getText().toString();
+			//String uName =  etUserName.getText().toString() ; 
+			//String password =  etPassword.getText().toString();
 			
-			String uNameText =   "naveen.jain+1904@thinkinghut.com"; //etUserName.getText().toString();
-			String passwordText = "naveen123";  // etPassword.getText().toString();
+			String uName =   "naveen.jain+1904@thinkinghut.com"; //etUserName.getText().toString();
+			String password = "naveen123";  // etPassword.getText().toString();
 			
 			if (NetworkDetector.init(getApplicationContext()).isNetworkAvailable())
 			{

@@ -13,24 +13,24 @@
         <LinearLayout
             android:id="@+id/linearLayout_horizontal"
             android:layout_width="match_parent"
-            android:layout_height="58dp"
+            android:layout_height="42dp"
             android:orientation="horizontal" >
 
             <TextView
                 android:id="@+id/textView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/new_inventory_item"
-                android:textSize="15sp" />
+                android:textSize="17sp" />
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="9dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/required_filed"
                 android:textSize="15sp" />
         </LinearLayout>
@@ -39,7 +39,9 @@
             android:id="@+id/additem_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/edittext_bg" >
+            android:background="@drawable/edittext_bg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" >
         </ListView>
     </LinearLayout>
 
