@@ -57,6 +57,8 @@ public class Options extends Activity {
 	ToggleButton toggleDataMatrix;
 	ToggleButton togglePDF417;
 	
+	public String uname;
+	
 	ToggleButton toggleOrientation;
 	
 	

@@ -38,6 +38,8 @@ public class MainActivity extends Activity implements OnClickListener, OnTouchLi
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.login);
         setupUI(); 
+        
+        
     }
 
 
