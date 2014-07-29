@@ -62,7 +62,8 @@
             android:ems="10"
             android:inputType="textPassword"
             android:singleLine="true"
-            android:hint="@string/hint_password" />
+            android:hint="@string/hint_password"
+            android:imeOptions="actionGo" />
     </LinearLayout>
 
     <LinearLayout

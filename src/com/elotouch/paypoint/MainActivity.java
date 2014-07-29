@@ -12,20 +12,25 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.view.Window;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.TextView.OnEditorActionListener;
 
 public class MainActivity extends Activity implements OnClickListener, OnTouchListener {
 
@@ -59,10 +64,26 @@ public class MainActivity extends Activity implements OnClickListener, OnTouchLi
 	    btnLogin.setOnClickListener(this);
 		etUserName.setOnTouchListener(this);
  		etPassword.setOnTouchListener(this);
-//		
-//		etUserName.requestFocus();
-//		setTextWatcher(etUserName);
-//		setTextWatcher(etPassword);
+ 		
+ 		etPassword.setOnEditorActionListener(new OnEditorActionListener() {
+			
+			@Override
+			public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+				// TODO Auto-generated method stub
+				if (actionId == EditorInfo.IME_ACTION_GO) {
+					
+					//Login API call
+					loginAPICall();
+					
+				}
+				
+				return false;
+			}
+		});
+ 		
+ 
+		setTextWatcher(etUserName);
+		
 		
 	}
     
@@ -90,8 +111,6 @@ public class MainActivity extends Activity implements OnClickListener, OnTouchLi
 			}
 		});
     	
-		
-
 	}
 
 
@@ -107,6 +126,15 @@ public class MainActivity extends Activity implements OnClickListener, OnTouchLi
 		// TODO Auto-generated method stub
 		
 		if (v.getId() == btnLogin.getId()) {
+			
+			//Login API call
+			loginAPICall();
+		}
+   }
+	
+	private void loginAPICall () {
+		
+		if (Validate()) {
 			String uName =  etUserName.getText().toString() ; 
 			String password =  etPassword.getText().toString();
 			
@@ -117,10 +145,26 @@ public class MainActivity extends Activity implements OnClickListener, OnTouchLi
 			{
 				new LoginTask(getApplicationContext(),new LoginTaskCompleteListner(),uName , password).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 			}
+		}
+	}
+	
+	private boolean Validate() {
+		boolean IsValid = true;
+		if (etUserName.getText().toString().equals("")) {
+			IsValid = false;
 			
+			((EditText) findViewById(R.id.etUserName)).requestFocus();
+			((EditText) findViewById(R.id.etUserName)).setError("Field cannot be left blank");
+		  
+		}else if(etPassword.getText().toString().equals("")){
+			IsValid = false;
+			((EditText) findViewById(R.id.etPassword)).requestFocus();
+			((EditText) findViewById(R.id.etPassword)).setError("Field cannot be left blank");
 		}
 		
-}
+		return IsValid;
+
+	}
 
 	public class LoginTaskCompleteListner implements AsyncTaskCompleteListener<LoginResponse> {
 
@@ -151,7 +195,9 @@ public class MainActivity extends Activity implements OnClickListener, OnTouchLi
 				
 				} else if (result.getStatus().equalsIgnoreCase("failure")) {
 					
-
+					//Show password fail
+					showDialog();
+					
 				}
 			}
 		}
@@ -177,6 +223,21 @@ public class MainActivity extends Activity implements OnClickListener, OnTouchLi
 		
 	}
 	
-
+	public void showDialog() {
+		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setTitle(R.string.login_failed);
+        alertDialogBuilder
+				.setMessage(R.string.error_invalid_password)
+				.setCancelable(false)
+				.setPositiveButton("OK",new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog,int id) {
+						
+					}
+				  });
+			
+		AlertDialog alertDialog = alertDialogBuilder.create();
+		alertDialog.show();
+	
+	}
 	
 }
