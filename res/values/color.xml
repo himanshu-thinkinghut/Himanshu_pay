@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="list_item_title">#fff</color>
+    <color name="list_background">#303030</color>
+    <color name="list_background_pressed">#000000</color>
+    <color name="list_divider">#FFFFFF</color>
+    <color name="counter_text_bg">#626262</color>
+    <color name="counter_text_color">#c5c4c4</color>
+    <color name="backColor">#FFE6E6</color>
+    <color name="backColorPop">#C7E6EB</color>
+    <color name="backBlack">#000000</color>
+    <color name="backWhite">#FFFFFF</color>
+    <color name="backGray1">#A8A8A8</color>
+    <color name="backGray">#EFEFEF</color>
+    <color name="backGray2">#C3C3C3</color>
+    <color name="backDarkGray">#7C7C7C</color>
+    <color name="backTrans">#00000000</color>
+    <color name="backlabel">#686868</color>
+    <color name="red_email_sent">#F21C23</color>
+    <color name="red">#ff0000</color>
+    <color name="backHeading">#9c9c9c</color>
+    <color name="lightGray">#cccccc</color>
+    <color name="section_startcolor">#aab7c0</color>
+    <color name="section_endcolor">#b9c3cc</color>
+    <color name="section_startcolor_selected">#c4b4c6</color>
+    <color name="section_endcolor_selected">#4f3e51</color>
+    <color name="white">#FFFFFF</color>
+    <color name="blue">#ff2570ba</color>
+    <color name="grey">#f7f7f7</color>
+    <color name="lightasmani">#E0F2F7</color>
+    <color name="lightblue">#DDEEFF</color>
+    <color name="gray_shade_0">#cccccc</color>
+    <color name="gray_shade_1">#4f4f4f</color>
+    <color name="gray_shade_2">#6e6e6e</color>
+    <color name="gray_shade_box">#898989</color>
+    <color name="transparentBlack">#ffdcdcdc</color>
+    <color name="green">#5e9732</color>
+    <color name="item_green">#22b573</color>
+    <color name="item_cyan">#29abe1</color>
+    <color name="item_yellow">#fbb03b</color>
+    <color name="item_orange">#f15a24</color>
+    <color name="item_purple">#9947ad</color>
+    <color name="item_green_gradiant_offset">#037d46</color>
+    <color name="item_cyan_gradiant_offset">#0a6990</color>
+    <color name="item_yellow_gradiant_offset">#b66f01</color>
+    <color name="item_orange_gradiant_offset">#a83309</color>
+    <color name="item_purple_gradiant_offset">#551066</color>
+
+</resources>
