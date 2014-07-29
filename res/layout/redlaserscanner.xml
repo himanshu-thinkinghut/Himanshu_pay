@@ -25,13 +25,21 @@
 	    android:gravity="center"
 	    android:textStyle="bold"
     	android:background="#000000" />
+  
+     <Button
+	    android:id="@+id/btn_back"
+	    android:layout_width="wrap_content" 
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="left"
+	    android:text="Back to Paypoint" />
     
     <Button
 	    android:id="@+id/btn_clearList"
 	    android:layout_width="wrap_content" 
 	    android:layout_height="wrap_content"
-	    android:layout_gravity="center"
+	    android:layout_gravity="right"
 	    android:text="Clear List" />
+    
     
     <View 
 	    android:layout_width="fill_parent"

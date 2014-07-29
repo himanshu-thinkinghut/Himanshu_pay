@@ -109,14 +109,15 @@ public final class R {
     }
     public static final class id {
         public static final int SDK_Version_TextField=0x7f0a000f;
-        public static final int action_settings=0x7f0a0031;
+        public static final int action_settings=0x7f0a0032;
         public static final int barcodeText=0x7f0a0004;
         public static final int barcodeType=0x7f0a0005;
         public static final int btnScan=0x7f0a0006;
-        public static final int btn_clearList=0x7f0a002c;
-        public static final int btn_multiscan=0x7f0a002f;
-        public static final int btn_options=0x7f0a0030;
-        public static final int btn_singlescan=0x7f0a002e;
+        public static final int btn_back=0x7f0a002c;
+        public static final int btn_clearList=0x7f0a002d;
+        public static final int btn_multiscan=0x7f0a0030;
+        public static final int btn_options=0x7f0a0031;
+        public static final int btn_singlescan=0x7f0a002f;
         public static final int btnlogin=0x7f0a0003;
         public static final int button_done=0x7f0a0029;
         public static final int button_request_image=0x7f0a0028;
@@ -133,7 +134,7 @@ public final class R {
         public static final int imglogo=0x7f0a000b;
         public static final int linearLayout1=0x7f0a000a;
         public static final int linearLayout2=0x7f0a000c;
-        public static final int listView1=0x7f0a002d;
+        public static final int listView1=0x7f0a002e;
         public static final int list_slidermenu=0x7f0a0002;
         public static final int num_found_text=0x7f0a0023;
         public static final int overlay_logo=0x7f0a0025;

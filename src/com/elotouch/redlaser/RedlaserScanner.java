@@ -29,6 +29,7 @@ public class RedlaserScanner extends Activity {
 	
 	BarcodeListAdapter listAdapter;
 	boolean isLaunchingAnotherActivity = false;
+	private Button btnBack ;
 	
 	private static final String SAVED_INSTANCE_LIST = "BarcodeList";
 	
@@ -92,6 +93,15 @@ public class RedlaserScanner extends Activity {
 		listAdapter = new BarcodeListAdapter(this, savedValues);
 		barcodeList.setAdapter(listAdapter);
 		
+		btnBack = (Button) findViewById(R.id.btn_back);
+		btnBack.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				finish();
+			}
+		});
     }
     
     @Override

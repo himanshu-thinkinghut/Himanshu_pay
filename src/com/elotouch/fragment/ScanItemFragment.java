@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.elotouch.paypoint.R;
+import com.elotouch.redlaser.RedlaserScanner;
 
 
 public class ScanItemFragment extends Fragment {
@@ -30,6 +31,8 @@ public ScanItemFragment(){}
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				Intent redLaser_Intent = new Intent(getActivity(), RedlaserScanner.class);
+				startActivity(redLaser_Intent);
 				
 				
 			}
