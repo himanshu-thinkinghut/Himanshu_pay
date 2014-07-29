@@ -31,6 +31,7 @@ public class MainActivity extends Activity implements OnClickListener, OnTouchLi
 
 	ImageView btnLogin;
 	EditText etUserName, etPassword;
+	public String sampleString;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
