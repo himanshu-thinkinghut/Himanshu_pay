@@ -4,6 +4,7 @@ import com.elotouch.asynctask.AsyncTaskCompleteListener;
 import com.elotouch.asynctask.LoginResponse;
 import com.elotouch.asynctask.LoginTask;
 import com.elotouch.barcodescanner.BarcodeScanner;
+import com.elotouch.util.Dialog;
 import com.elotouch.util.NetworkDetector;
 
 import android.os.AsyncTask;
@@ -37,6 +38,7 @@ public class MainActivity extends Activity implements OnClickListener, OnTouchLi
 	ImageView btnLogin;
 	EditText etUserName, etPassword;
 	public String sampleString;
+
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -142,6 +144,9 @@ public class MainActivity extends Activity implements OnClickListener, OnTouchLi
 			if (NetworkDetector.init(getApplicationContext()).isNetworkAvailable())
 			{
 				new LoginTask(getApplicationContext(),new LoginTaskCompleteListner(),uName , password).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+			}else {
+				//Show no internet connection dialog
+				Dialog.showDialog(MainActivity.this, "Network Problem", "Please check your network connection");
 			}
 		}
 	}
@@ -194,8 +199,7 @@ public class MainActivity extends Activity implements OnClickListener, OnTouchLi
 				} else if (result.getStatus().equalsIgnoreCase("failure")) {
 					
 					//Show password fail
-					showDialog();
-					
+					Dialog.showDialog(MainActivity.this, "Login fail", "Invalid Password");
 				}
 			}
 		}
@@ -221,11 +225,11 @@ public class MainActivity extends Activity implements OnClickListener, OnTouchLi
 		
 	}
 	
-	public void showDialog() {
+	public void showDialog(String title, String message) {
 		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setTitle(R.string.login_failed);
+        alertDialogBuilder.setTitle(title);
         alertDialogBuilder
-				.setMessage(R.string.error_invalid_password)
+				.setMessage(message)
 				.setCancelable(false)
 				.setPositiveButton("OK",new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog,int id) {
